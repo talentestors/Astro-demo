@@ -20,18 +20,6 @@ const fontWeight = "bold";
 const textCase = "uppercase";
 ---
 
-<style is:global define:vars={{ skillColor, fontWeight, textCase }}>
-  h1 {
-    color: purple;
-    font-size: 4rem;
-  }
-  .skill {
-    color: var(--skillColor);
-    font-weight: var(--fontWeight);
-    text-transform: var(--textCase);
-  }
-</style>
-
 <BaseLayout pageTitle={pageTitle}>
   <h2>……和我的新 Astro 网站！</h2>
 
@@ -63,3 +51,15 @@ const textCase = "uppercase";
 
   {goal === 3 ? <p>我的目标是在三天内完成。</p> : <p>我的目标不是 3 天。</p>}
 </BaseLayout>
+
+<style is:global define:vars={{ skillColor, fontWeight, textCase }}>
+  h1 {
+    color: purple;
+    font-size: 4rem;
+  }
+  .skill {
+    color: var(--skillColor);
+    font-weight: var(--fontWeight);
+    text-transform: var(--textCase);
+  }
+</style>
