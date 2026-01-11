@@ -11,5 +11,8 @@ import netlify from "@astrojs/netlify";
 export default defineConfig({
   site: "https://poetic-brioche-ecf1d0.netlify.app/",
   integrations: [preact()],
-  adapter: netlify(),
+  adapter: netlify({
+    edgeMiddleware: true
+  }),
+  output: 'server'
 });
